@@ -1,5 +1,5 @@
 {
-	"name": "astro-minimal-starter",
+	"name": "x-flip-demo",
 	"type": "module",
 	"version": "0.0.1",
 	"private": true,
@@ -12,6 +12,8 @@
 	},
 	"dependencies": {
 		"@astrojs/preact": "^1.1.0",
+		"@linaria/core": "^3.0.0-beta.22",
+		"@linaria/rollup": "^3.0.0-beta.22",
 		"astro": "1",
 		"preact": "^10.6.5"
 	},

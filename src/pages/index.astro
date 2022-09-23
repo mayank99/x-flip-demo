@@ -1,71 +1,11 @@
 ---
 import Layout from '~/pages/_layout.astro';
+import ReorderableList from '~/components/ReorderableList';
 ---
 
 <Layout>
-	<article>
-		<x-flip key='A'>
-			<div>
-				<span>A</span>
-				<button>&UpArrow;</button>
-				<button>&DownArrow;</button>
-			</div>
-		</x-flip>
-
-		<x-flip key='B'>
-			<div>
-				<span>B</span>
-				<button>&UpArrow;</button>
-				<button>&DownArrow;</button>
-			</div>
-		</x-flip>
-
-		<x-flip key='C'>
-			<div>
-				<span>C</span>
-				<button>&UpArrow;</button>
-				<button>&DownArrow;</button>
-			</div>
-		</x-flip>
-	</article>
+	<ReorderableList client:load />
+	<script>
+		import '~/components/x-flip';
+	</script>
 </Layout>
-
-<style>
-	article {
-		width: min(400px, 80vw);
-		display: grid;
-		align-content: center;
-		justify-self: center;
-		gap: 1rem;
-	}
-
-	article div {
-		width: 100%;
-		border: 0.5px solid;
-		padding: 1rem;
-		border-radius: 0.5rem;
-		display: flex;
-		align-items: center;
-	}
-
-	button {
-		display: grid;
-		place-content: center;
-		font: inherit;
-		font-size: x-large;
-		cursor: pointer;
-		background: transparent;
-		border: none;
-		border-radius: 9e9px;
-		width: 2rem;
-		height: 2rem;
-	}
-
-	button:hover {
-		background: hsl(0 0% 50% / 0.5);
-	}
-
-	button:first-of-type {
-		margin-left: auto;
-	}
-</style>
